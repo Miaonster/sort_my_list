@@ -1,1 +1,119 @@
-html, body { font-family: Monaca; }
+html, body { font-family: Monaca; height: 100%; margin: 0}
+
+h1.notice {
+  display: -webkit-box; display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-align: center; -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  -webkit-box-pack: center; -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  height: 10rem;
+  padding: 0 3rem;
+
+  font-family: fantasy;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.notice {
+  margin: 0;
+  height: 100%;
+  width: 100%; /* width needed for Firefox */
+
+  /* old flexbox - Webkit and Firefox. For backwards compatibility */
+  display: -webkit-box; display: -moz-box;
+  /* middle-aged flexbox. Needed for IE 10 */
+  display: -ms-flexbox;
+  /* new flexbox. Chrome (prefix), Opera, upcoming browsers without */
+  display: -webkit-flex;
+  display: flex;
+
+  /* old flexbox: box-* */
+  -webkit-box-align: center; -moz-box-align: center;
+  /* middle flexbox: flex-* */
+  -ms-flex-align: center;
+  /* new flexbox: various property names */
+  -webkit-align-items: center;
+  align-items: center;
+
+
+  -webkit-box-pack: center; -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+ol {
+  counter-reset: item;
+  -webkit-padding-start: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.sortable li.sortable-item {
+  margin: 20px 0;
+}
+
+.sortable li.sortable-item > div {
+  display: inline-block;
+  width: 700px;
+  /*margin: 0 0 20px 0;*/
+  padding: 8px 15px;
+  border: dotted 1px;
+}
+
+.sortable li.sortable-item:hover {
+  background-color: rgba(188, 225, 231, 0.2);
+}
+
+.sortable li.sortable-item:before {
+  display: inline-block;
+  content: counter(item);
+  counter-increment: item;
+  border: dotted 1px;
+  display: inline-block;
+  /*margin: 0 0 20px 0;*/
+  
+  padding: 8px 15px;
+  border-style: dotted;
+  border-width: 1px 0 1px 1px;
+
+  width: 50px;
+  text-align: center;
+}
+
+.sortable li.sortable-placeholder {
+  display: inline-block;
+  width: 810px;
+  border: dotted 1px;
+  height: 36px;
+}
+
+.sortable-container {
+  margin: 0 auto 0 auto;
+  width: 820px;
+  padding: 40px 0 0 0;
+}
+
+.error-notice {
+  width: 90%;
+  height: 90%;
+  text-align: center;
+  vertical-align: middle;
+  background: rgba(0,0,0,0);
+  border: none;
+  font-family: fantasy;
+  font-size: 40px;
+  padding-bottom: 80px;
+}
