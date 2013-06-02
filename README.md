@@ -1,4 +1,4 @@
-sort_my_list
+SORT MY LIST
 ============
 * Author: witcher42
 * Email: witcher42.dy@gmail.com
